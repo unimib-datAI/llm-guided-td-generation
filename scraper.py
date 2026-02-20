@@ -5,6 +5,9 @@ from pathlib import Path
 from nltk.tokenize import sent_tokenize
 import json
 import re
+import os
+import dotenv
+dotenv.load_dotenv()
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (compatible; CleanScraper/1.0)"
@@ -19,7 +22,7 @@ OUTPUT_DIR_CLEANED.mkdir(exist_ok=True)
 OUTPUT_DIR_BLOCK = Path("block_data")
 OUTPUT_DIR_BLOCK.mkdir(exist_ok=True)
 
-START_URLS = ["https://apidocs.geoapify.com/docs/geocoding/reverse-geocoding/"]
+START_URLS = [os.getenv("START_URLS")]
 
 visited = set()
 

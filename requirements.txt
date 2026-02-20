@@ -1,0 +1,7 @@
+torch>=2.2,<3.0
+gliner>=0.2.8
+openai>=1.30,<2.0
+requests>=2.31
+beautifulsoup4>=4.12
+nltk>=3.8
+python-dotenv>=1.0
