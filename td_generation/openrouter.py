@@ -6,7 +6,7 @@ import dotenv
 from td_generation.prompt_creation import compose_prompt
 dotenv.load_dotenv()
 
-prompt = compose_prompt(configuration="GUIDED", input_file=Path("../inputs/TV_block.json"))
+prompt = compose_prompt(configuration="GUIDED", input_file=Path("../ner_output/TV_block.json"))
 key = os.getenv("OPENROUTER_API_KEY")
 
 response = requests.post(

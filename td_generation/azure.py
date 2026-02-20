@@ -14,7 +14,7 @@ client = AzureOpenAI(
     api_version="2025-01-01-preview",
 )
 
-prompt = compose_prompt(configuration="GUIDED", input_file=Path("../inputs/TV_block.json"))
+prompt = compose_prompt(configuration="GUIDED", input_file=Path("../ner_output/TV_block.json"))
 
 chat_prompt = [
     {
