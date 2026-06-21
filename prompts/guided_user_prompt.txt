@@ -1,14 +1,8 @@
-You are an expert in W3C Web of Things (WoT), Semantic Web technologies, 
-  and domain modeling for mobility and mobility-adjacent services.
+Convert the following HTML API/service documentation into a semantically enriched W3C WoT Thing Description (TD).
 
-Your task is to convert the provided service/API documentation into a single, valid, semantically enriched W3C Web of Things Thing Description (TD) version 1.1 (https://www.w3.org/TR/wot-thing-description11/).
+#### INPUT DESCRIPTION
 
-────────────────────────────────────────────
-INPUT DESCRIPTION
-────────────────────────────────────────────
-
-The input is a JSON object for each web page of the service/API documentation, 
-  containing:
+The input is a JSON object for each web page of the service/API documentation, containing:
 
 - `url`: the URL of the original page.
 - `html`: the reconstructed HTML of the page, which preserves the order of 
@@ -27,9 +21,7 @@ Notes:
    - Contextual and operational constraints
 4. The reconstructed HTML is intended to provide a faithful, ordered, semantically enriched view of the documentation.
 
-────────────────────────────────────────────
-IMPORTANCE OF SEMANTIC LABELS
-────────────────────────────────────────────
+#### IMPORTANCE OF SEMANTIC LABELS
 
 The semantic labels are fundamental for understanding:
 
@@ -85,52 +77,19 @@ LABEL_GUIDANCE:
 - energy source or fuel characteristics
 - ecological regulation compliance
 
-────────────────────────────────────────────
-STRICT REQUIREMENTS (MANDATORY)
-────────────────────────────────────────────
-
-1. OUTPUT FORMAT
-- Output ONLY a single JSON-LD Thing Description.
-- Do NOT include explanations, comments, markdown, or additional text.
-
-2. SEMANTIC ENRICHMENT
-- Use semantic types at the Thing level and at all properties, actions, and events.
-- Use established vocabularies (SAREF, SOSA/SSN, schema.org, or others when justified).
-- Include metadata to capture non-functional aspects, accessibility, cost, and sustainability as hinted by the labels.
-
-3. FAITHFULNESS
-- Only use information explicitly present in the input blocks or code examples.
-- Do NOT invent endpoints, properties, actions, events, HTTP methods, or security schemes.
-- If information is missing, omit it rather than guessing.
-
-────────────────────────────────────────────
-FUNCTIONAL & NON-FUNCTIONAL UNDERSTANDING
-────────────────────────────────────────────
+#### FUNCTIONAL & NON-FUNCTIONAL UNDERSTANDING
 
 - Use the content and semantic labels to infer:
   - What the service does (functionalities)
   - How it can be used (actions/properties/events)
   - Contextual or operational limitations
   - Non-functional constraints (cost, performance, reliability, accessibility, sustainability)
-- Include in the TD descriptive fields that reflect these aspects if they are indicated by labels.
 
-────────────────────────────────────────────
-EXAMPLES AND TECHNICAL DETAILS
-────────────────────────────────────────────
+#### EXAMPLES AND TECHNICAL DETAILS
 
 - Carefully analyze all code examples in the input (HTTP requests, responses, parameters).
 - Use them to infer actual operations, populate `forms`, input/output schemas, and confirm interaction patterns.
 
-────────────────────────────────────────────
-INPUT
-────────────────────────────────────────────
+#### INPUT
 
 {input}
-
-────────────────────────────────────────────
-OUTPUT
-────────────────────────────────────────────
-
-Produce ONE and ONLY ONE output:
-- A valid, syntactically correct, semantically enriched
-  W3C Web of Things Thing Description (TD) 1.1 in JSON-LD.
