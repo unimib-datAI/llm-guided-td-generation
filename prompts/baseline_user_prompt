@@ -1,6 +1,4 @@
-You are an expert in W3C Web of Things (WoT), Semantic Web technologies, and domain modeling for mobility and mobility-adjacent services.
-
-Your task is to convert the provided service/API documentation from unstructured HTML into a single, valid, semantically enriched W3C Web of Things Thing Description (TD) version 1.1 (https://www.w3.org/TR/wot-thing-description11/).
+Convert the following HTML API/service documentation into a semantically enriched W3C WoT Thing Description (TD).
 
 From the provided HTML documentation, extract and infer all necessary information to create a comprehensive TD that accurately represents the service's:
 
@@ -54,43 +52,11 @@ Here's a list of aspects to consider and find while analyzing the documentation:
 - energy source or fuel characteristics
 - ecological regulation compliance
 
-────────────────────────────────────────────
-STRICT REQUIREMENTS (MANDATORY)
-────────────────────────────────────────────
-
-1. OUTPUT FORMAT
-- Output ONLY a single JSON-LD Thing Description.
-- Do NOT include explanations, comments, markdown, or additional text.
-
-2. SEMANTIC ENRICHMENT
-- Use semantic types at the Thing level and at all properties, actions, and events.
-- Use established vocabularies (SAREF, SOSA/SSN, schema.org, or others when justified).
-- Include metadata to capture non-functional aspects, accessibility, cost, and sustainability...
-
-3. FAITHFULNESS
-- Only use information explicitly present in the documentation.
-- Do NOT invent endpoints, properties, actions, events, HTTP methods, or security schemes.
-- If information is missing, omit it rather than guessing.
-
-────────────────────────────────────────────
-EXAMPLES AND TECHNICAL DETAILS
-────────────────────────────────────────────
+#### EXAMPLES AND TECHNICAL DETAILS
 
 - Carefully analyze all code examples in the input (HTTP requests, responses, parameters).
 - Use them to infer actual operations, populate `forms`, input/output schemas, and confirm interaction patterns.
 
-────────────────────────────────────────────
-INPUT
-────────────────────────────────────────────
+#### INPUT
 
 {input}
-
-────────────────────────────────────────────
-OUTPUT
-────────────────────────────────────────────
-
-Produce ONE and ONLY ONE output:
-- A valid, syntactically correct, semantically enriched
-  W3C Web of Things Thing Description (TD) 1.1 in JSON-LD.
-You are an expert in W3C Web of Things (WoT), Semantic Web technologies, 
-  and domain modeling for mobility and mobility-adjacent services.
